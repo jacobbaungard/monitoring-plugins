@@ -91,6 +91,8 @@ extern unsigned int socket_timeout_state;
 extern int econn_refuse_state;
 extern int was_refused;
 extern int address_family;
+extern char address_length(int address_family);
+extern void parse_address_string(int address_family, struct sockaddr_storage *addr, char *address, int size);
 
 RETSIGTYPE socket_timeout_alarm_handler (int) __attribute__((noreturn));
 
